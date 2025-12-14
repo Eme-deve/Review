@@ -10,7 +10,7 @@ body {
     background-color: #F5F7FA;
     color: #333;
     line-height: 1.6;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 header {
@@ -685,7 +685,6 @@ footer .text-center p {
     margin: 0;
 }
 
-/* Mobile styles */
 @media (max-width: 576px) {
     body{
         overflow-x: hidden;

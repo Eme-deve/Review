@@ -270,7 +270,7 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
 
-            // Submit form
+            
             fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form),
