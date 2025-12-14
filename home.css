@@ -624,7 +624,7 @@ footer .text-center p {
     }
 
     .service-card {
-        height: auto;
+        height: 350px;
         margin-bottom: 1.5rem;
         perspective: none;
     }
@@ -677,10 +677,17 @@ footer .text-center p {
         text-align: center;
     }
 
+
     footer .col-lg-6 {
         margin-bottom: 2rem;
     }
-
+    .footer-text {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    line-height: 1.6;
+}
     footer {
         padding-bottom: 3rem;
     }
@@ -694,6 +701,7 @@ footer .text-center p {
     }
 
     footer p {
+        
         font-size: 0.85rem;
     }
 
