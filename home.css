@@ -1,0 +1,771 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F7FA;
+    color: #333;
+    line-height: 1.6;
+    /* overflow: hidden; */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #2C3E50 !important;
+
+    padding: 15px 40px;
+}
+
+.navbar-brand img {
+    background: #ffffff;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.logo {
+    width: 100px;
+}
+
+#navbarNav {
+    font-size: 18px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+    transform: translateX(-5px);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    filter: brightness(1.5);
+}
+
+.hero-section {
+    background-image: url('./Multimedia/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subtext {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.stats {
+    margin: 2rem 0;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.stat-item i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.btnn {
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btnn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.arrow {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btnn:hover .arrow {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+
+.about-section {
+    background-color: #F8F9FC;
+    padding: 4rem 0;
+}
+
+.section-title {
+    color: black !important;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #201f3b;
+    margin-bottom: 1.5rem;
+}
+
+.subsection-title {
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #201f3b;
+    margin-top: 2rem;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.services-section.dynamic-bg {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9ecef 50%);
+    overflow: hidden;
+}
+
+.services-section.dynamic-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 123, 255, 0.05) 0%,
+            rgba(0, 123, 255, 0.1) 25%,
+            rgba(108, 117, 125, 0.05) 25%,
+            rgba(108, 117, 125, 0.1) 50%,
+            rgba(108, 117, 125, 0.1) 50%,
+            rgba(108, 117, 125, 0.05) 75%,
+            rgba(0, 123, 255, 0.05) 75%,
+            rgba(0, 123, 255, 0.1) 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
+}
+
+.services-section.dynamic-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+.services-section.dynamic-bg .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.services-section.dynamic-bg .subtext {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.service-card {
+    perspective: 1000px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    height: 420px;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.service-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+.service-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-card .card-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-card .card-text {
+    color: #666;
+}
+
+
+.specialists-section {
+    background-color: #f8f9fa;
+}
+
+.specialist-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.specialist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.specialist-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.specialist-card .card-title {
+    font-weight: 600;
+    color: #201f3b;
+    margin-bottom: 0.5rem;
+}
+
+.specialist-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.specialist-card .card-text {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    text-align: center;
+    line-height: 35px;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.social-links a:hover {
+    background-color: #007bff;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+
+.testimonials-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="50" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="50" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.testimonials-section .section-title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-section .subtext {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    /* max-width: 800px; */
+    margin: 0 auto;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card .card-body {
+    color: #333;
+}
+
+.testimonial-card .card-text {
+    color: #555;
+    font-weight: 500;
+}
+
+.testimonial-card h6 {
+    color: #201f3b;
+    font-weight: 600;
+}
+
+.testimonial-card small {
+    color: #666;
+}
+
+
+.testimonials-scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.testimonials-scroll {
+    display: flex;
+    gap: 2rem;
+    animation: scrollTestimonials 40s linear infinite;
+    /* width: calc(200px * 6); */
+}
+
+.testimonials-scroll:hover {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    flex: 0 0 400px;
+    max-width: 400px;
+}
+
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    opacity: 1;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(0, 123, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #007bff;
+    background-color: transparent;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+
+.stat-card {
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.leadership-section {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9ecef 50%);
+    overflow: hidden;
+}
+
+.leadership-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 123, 255, 0.05) 0%,
+            rgba(0, 123, 255, 0.1) 25%,
+            rgba(108, 117, 125, 0.05) 25%,
+            rgba(108, 117, 125, 0.1) 50%,
+            rgba(108, 117, 125, 0.1) 50%,
+            rgba(108, 117, 125, 0.05) 75%,
+            rgba(0, 123, 255, 0.05) 75%,
+            rgba(0, 123, 255, 0.1) 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
+}
+
+.leadership-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        margin-bottom: 1rem;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    #navbarNav {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .service-card {
+        margin-bottom: 2rem;
+    }
+
+    .specialist-card {
+        margin-bottom: 2rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%;
+    }
+
+    .stat-card {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .counter {
+        font-size: 2rem;
+    }
+
+    .value-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 991px) and (min-width: 769px) {
+    
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    .stats {
+        justify-content: space-around;
+    }
+
+    .service-card {
+        height: 380px;
+    }
+
+    .specialist-card {
+        max-width: 300px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 350px;
+        max-width: 350px;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+        padding: 2rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    .btnn {
+        font-size: 16px;
+        padding: 0.4rem 1rem;
+    }
+
+    .service-icon {
+        font-size: 2.5rem;
+    }
+
+    .service-card {
+        height: 350px;
+        margin-bottom: 1.5rem;
+    }
+
+    .specialist-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .specialist-card .card-title {
+        font-size: 1.1rem;
+    }
+
+    .specialist-role {
+        font-size: 0.8rem;
+    }
+
+    .specialist-card .card-text {
+        font-size: 0.85rem;
+    }
+
+    .carousel-indicators {
+        bottom: -40px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 300px;
+        max-width: 300px;
+    }
+
+    .testimonials-scroll {
+        gap: 1rem;
+    }
+
+    .counter {
+        font-size: 1.8rem;
+    }
+
+    .stat-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .footer .row {
+        text-align: center;
+    }
+
+    .footer .col-lg-6 {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .subtext {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .service-card {
+        height: 450px;
+    }
+
+    .specialist-card {
+        max-width: 400px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 450px;
+        max-width: 450px;
+    }
+}
+
+/* Extra large desktop styles */
+@media (min-width: 1400px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .navbar {
+        padding: 20px 60px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+}
