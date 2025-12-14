@@ -15,6 +15,12 @@ body {
     color: #333;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 header {
@@ -332,6 +338,13 @@ header {
     transform: translateY(-2px);
 }
 
+.carousel,
+.carousel-inner,
+.carousel-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 
 
 .carousel-control-prev,
@@ -449,9 +462,10 @@ header {
 
 
 @media (max-width: 768px) {
-    body{
+    body {
         overflow-x: hidden;
     }
+
     .hero-section h1 {
         font-size: 2rem;
     }
@@ -511,7 +525,7 @@ header {
 
 /* Tablet styles */
 @media (max-width: 991px) and (min-width: 769px) {
-    
+
     .hero-section h1 {
         font-size: 2.2rem;
     }
@@ -576,9 +590,10 @@ footer .text-center p {
 }
 
 @media (max-width: 576px) {
-    body{
+    body {
         overflow-x: hidden;
     }
+
     .hero-section {
         min-height: 50vh;
         padding: 2rem 0;
@@ -642,7 +657,7 @@ footer .text-center p {
         bottom: -40px;
     }
 
-    
+
     .counter {
         font-size: 1.8rem;
     }
@@ -698,7 +713,7 @@ footer .text-center p {
         max-width: 400px;
     }
 
-    
+
 }
 
 
