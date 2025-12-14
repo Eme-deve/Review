@@ -9,6 +9,12 @@ img {
     height: auto;
 }
 
+
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F5F7FA;
@@ -19,8 +25,8 @@ body {
 }
 
 .row {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 header {
@@ -206,9 +212,9 @@ header {
 .service-card {
     perspective: 1000px;
     border-radius: 10px;
+    width: 100%;
     overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    height: 420px;
+    transform-style: preserve-3d;
 }
 
 .service-card:hover {
