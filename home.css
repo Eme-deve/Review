@@ -643,7 +643,7 @@ header {
     }
 }
 
-/* Footer styles */
+
 footer {
     background-color: #2C3E50 !important;
 }
@@ -687,6 +687,9 @@ footer .text-center p {
 
 /* Mobile styles */
 @media (max-width: 576px) {
+    body{
+        overflow-x: hidden;
+    }
     .hero-section {
         min-height: 50vh;
         padding: 2rem 0;
@@ -712,6 +715,21 @@ footer .text-center p {
     .service-card {
         height: 350px;
         margin-bottom: 1.5rem;
+        perspective: none;
+    }
+
+    .service-card .card-inner {
+        transform: none !important;
+    }
+
+    .service-card .card-back {
+        display: none;
+    }
+
+    .about-section .img-fluid {
+        max-width: 100%;
+        height: auto;
+        margin-top: 2rem;
     }
 
     .specialist-image {
