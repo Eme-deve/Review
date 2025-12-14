@@ -794,7 +794,7 @@ footer .text-center p {
     }
 }
 
-/* Large desktop styles */
+
 @media (min-width: 1200px) {
     .hero-section h1 {
         font-size: 3rem;
