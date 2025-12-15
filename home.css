@@ -529,7 +529,7 @@ header {
     }
 }
 
-/* Tablet styles */
+
 @media (max-width: 991px) and (min-width: 769px) {
 
     .hero-section h1 {
@@ -624,17 +624,18 @@ footer .text-center p {
     }
 
     .service-card {
-        height: 350px;
+        height: 450px;
         margin-bottom: 1.5rem;
         perspective: none;
     }
 
+    
     .service-card .card-inner {
-        transform: none !important;
+        transform: translateX(-10px) !important;
     }
 
     .service-card .card-back {
-        display: none;
+        display: block;
     }
 
     .about-section .img-fluid {
@@ -663,7 +664,6 @@ footer .text-center p {
     .carousel-indicators {
         bottom: -40px;
     }
-
 
     .counter {
         font-size: 1.8rem;
@@ -756,4 +756,80 @@ footer .text-center p {
     .section-title {
         font-size: 3rem;
     }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 50%, #e9ecef 50%);
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(0, 123, 255, 0.05) 0%,
+            rgba(0, 123, 255, 0.1) 25%,
+            rgba(108, 117, 125, 0.05) 25%,
+            rgba(108, 117, 125, 0.1) 50%,
+            rgba(108, 117, 125, 0.1) 50%,
+            rgba(108, 117, 125, 0.05) 75%,
+            rgba(0, 123, 255, 0.05) 75%,
+            rgba(0, 123, 255, 0.1) 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: 1;
+}
+
+.testimonials-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;
+    min-height: auto;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-quote {
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+.testimonial-text {
+    font-style: italic;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+    
+}
+
+.client-info {
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.client-avatar {
+    flex-shrink: 0;
+}
+
+.client-info h6 {
+    font-weight: 600;
+    color: #333;
+}
+
+.client-info p {
+    font-size: 0.9rem;
 }
