@@ -71,6 +71,10 @@ header {
     filter: brightness(1.5);
 }
 
+.user-image1 {
+    width: 250px !important;
+}
+
 .hero-section {
     background-image: url('./Multimedia/360_F_814547144_an4xSu5K7CVQM1oAukpYURr3h3fUqeql.jpg');
     background-size: cover;
